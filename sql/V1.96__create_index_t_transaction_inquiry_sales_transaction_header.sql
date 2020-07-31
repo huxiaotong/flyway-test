@@ -1,0 +1,3 @@
+CREATE INDEX t_transaction_inquiry_scm_transaction_header_key2 ON scm.t_transaction_inquiry_scm_transaction_header(integrated_order_id);
+CREATE INDEX t_transaction_inquiry_scm_transaction_header_key3 ON scm.t_transaction_inquiry_scm_transaction_header(store_code, data_creation_business_date, cash_register_no, receipt_no);
+

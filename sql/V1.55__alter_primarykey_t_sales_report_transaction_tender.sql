@@ -1,0 +1,3 @@
+ALTER TABLE scm.t_scm_report_transaction_tender
+ DROP CONSTRAINT t_scm_report_transaction_tender_pk,
+ ADD CONSTRAINT t_scm_report_transaction_tender_pk PRIMARY KEY(scm_transaction_id,tender_group,tender_id,tender_sub_number);

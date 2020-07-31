@@ -1,0 +1,3 @@
+CREATE INDEX t_transaction_inquiry_order_information_key1 ON scm.t_transaction_inquiry_order_information(order_barcode_number);
+CREATE INDEX t_transaction_inquiry_order_information_key2 ON scm.t_transaction_inquiry_order_information(customer_id,order_confirmation_date_time);
+

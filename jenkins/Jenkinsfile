@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('flyway') {
+            environment {
+               flywayHome = tool 'flyway'
+            }
+            steps {
+                sh 'ls ${flywayHome}'
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+
+ CREATE INDEX t_scm_report_transaction_header_KEY1 ON scm.t_scm_report_transaction_header(ims_linkage_flag,ims_linkage_date,store_code,update_datetime);
+ CREATE INDEX t_scm_report_transaction_header_KEY2 ON scm.t_scm_report_transaction_header(transaction_summary_flag,ims_linkage_date,store_code,cash_register_no,update_datetime);
+ 

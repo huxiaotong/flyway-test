@@ -1,0 +1,3 @@
+ALTER TABLE scm.t_alteration_history_scm_transaction_tender
+ DROP CONSTRAINT t_alteration_history_scm_transaction_tender_pk,
+ ADD CONSTRAINT t_alteration_history_scm_transaction_tender_pk PRIMARY KEY(transaction_id,order_sub_number,scm_transaction_id,tender_group,tender_id,history_type,tender_sub_number);

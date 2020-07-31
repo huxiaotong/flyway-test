@@ -1,0 +1,23 @@
+ALTER TABLE scm.t_scm_report_transaction_tax DROP CONSTRAINT t_scm_report_transaction_tax_pk;
+ALTER TABLE scm.t_scm_report_transaction_tax ADD CONSTRAINT t_scm_report_transaction_tax_pk PRIMARY KEY(scm_transaction_id,detail_sub_number,tax_group,tax_sub_number);
+
+ALTER TABLE scm.t_scm_error_scm_transaction_tax ALTER COLUMN tax_sub_number SET NOT NULL;
+ALTER TABLE scm.t_scm_error_scm_transaction_tax DROP CONSTRAINT t_scm_error_scm_transaction_tax_pk;
+ALTER TABLE scm.t_scm_error_scm_transaction_tax ADD CONSTRAINT t_scm_error_scm_transaction_tax_pk PRIMARY KEY(transaction_id,order_sub_number,scm_transaction_id,detail_sub_number,tax_group,tax_sub_number);
+
+ALTER TABLE scm.t_error_evacuation_scm_transaction_tax ALTER COLUMN tax_sub_number SET NOT NULL;
+ALTER TABLE scm.t_error_evacuation_scm_transaction_tax DROP CONSTRAINT t_error_evacuation_scm_transaction_tax_pk;
+ALTER TABLE scm.t_error_evacuation_scm_transaction_tax ADD CONSTRAINT t_error_evacuation_scm_transaction_tax_pk PRIMARY KEY(transaction_id,order_sub_number,scm_transaction_id,detail_sub_number,tax_group,tax_sub_number);
+
+ALTER TABLE scm.t_transaction_inquiry_scm_transaction_tax DROP CONSTRAINT t_transaction_inquiry_scm_transaction_tax_pk;
+ALTER TABLE scm.t_transaction_inquiry_scm_transaction_tax ADD CONSTRAINT t_transaction_inquiry_scm_transaction_tax_pk PRIMARY KEY(order_sub_number,scm_transaction_id,detail_sub_number,tax_group,tax_sub_number);
+
+ALTER TABLE scm.t_scm_transaction_tax DROP CONSTRAINT t_scm_transaction_tax_pk;
+ALTER TABLE scm.t_scm_transaction_tax ADD CONSTRAINT t_scm_transaction_tax_pk PRIMARY KEY(order_sub_number,scm_transaction_id,detail_sub_number,tax_group,tax_sub_number);
+
+ALTER TABLE scm.t_alteration_history_scm_transaction_tax ALTER COLUMN tax_sub_number SET NOT NULL;
+ALTER TABLE scm.t_alteration_history_scm_transaction_tax DROP CONSTRAINT t_alteration_history_scm_transaction_tax_pk;
+ALTER TABLE scm.t_alteration_history_scm_transaction_tax ADD CONSTRAINT t_alteration_history_scm_transaction_tax_pk PRIMARY KEY(transaction_id,order_sub_number,scm_transaction_id,detail_sub_number,tax_group,history_type,tax_sub_number);
+
+
+commit;
