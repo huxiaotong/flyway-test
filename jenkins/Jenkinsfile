@@ -6,7 +6,7 @@ pipeline {
                flywayHome = tool 'flyway'
             }
             steps {
-                sh 'ls ${env.WORKSPACE}'
+                sh "ls ${env.WORKSPACE}"
                 sh '${flywayHome}/flyway -url=jdbc:postgresql://pg:5432/scm -user=scm -password=scm info'
             }
         }
