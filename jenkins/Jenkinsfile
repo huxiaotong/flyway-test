@@ -6,7 +6,7 @@ pipeline {
                flywayHome = tool 'flyway'
             }
             steps {
-                sh "${flywayHome}/flyway -configFiles=${env.WORKSPACE}/conf/flyway.conf -locations=filesystem:${env.WORKSPACE}/sql -url=jdbc:postgresql://pg:5432/scm -user=scm -password=scm migrate"
+                sh "${flywayHome}/flyway -configFiles=${env.WORKSPACE}/conf/flyway.conf -locations=filesystem:${env.WORKSPACE}/sql -url=jdbc:postgresql://pg:5432/scm -user=scm -password=scm info"
             }
         }
     }
